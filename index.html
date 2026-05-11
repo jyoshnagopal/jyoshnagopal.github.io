@@ -33,7 +33,6 @@
       overflow-x: hidden;
     }
  
-    /* ── GRID BACKGROUND ── */
     body::before {
       content: '';
       position: fixed;
@@ -46,7 +45,6 @@
       z-index: 0;
     }
  
-    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -87,7 +85,6 @@
  
     .nav-links a:hover { color: var(--accent); }
  
-    /* ── HERO ── */
     .hero {
       position: relative;
       z-index: 1;
@@ -212,7 +209,6 @@
       margin-top: 4px;
     }
  
-    /* ── SECTIONS ── */
     section {
       position: relative;
       z-index: 1;
@@ -239,7 +235,6 @@
       line-height: 1.15;
     }
  
-    /* ── ABOUT ── */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -298,7 +293,6 @@
       line-height: 1.5;
     }
  
-    /* ── EXPERIENCE ── */
     .timeline { display: flex; flex-direction: column; gap: 0; }
  
     .timeline-item {
@@ -334,8 +328,6 @@
       font-size: 0.78rem;
       color: var(--muted);
     }
- 
-    .timeline-right {}
  
     .timeline-role {
       font-family: var(--display);
@@ -387,7 +379,6 @@
       letter-spacing: 0.03em;
     }
  
-    /* ── PROJECTS ── */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -459,7 +450,6 @@
       gap: 6px;
     }
  
-    /* ── SKILLS ── */
     .skills-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -507,7 +497,6 @@
       background: rgba(0,212,170,0.05);
     }
  
-    /* ── CONTACT ── */
     .contact-inner {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -544,7 +533,6 @@
       flex-wrap: wrap;
     }
  
-    /* ── FOOTER ── */
     footer {
       position: relative;
       z-index: 1;
@@ -557,7 +545,6 @@
       letter-spacing: 0.05em;
     }
  
-    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -569,7 +556,6 @@
     .hero-cta   { animation: fadeUp 0.5s ease both 0.4s; }
     .hero-stats { animation: fadeUp 0.5s ease both 0.5s; }
  
-    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
@@ -694,16 +680,20 @@
         <div class="timeline-right">
           <div class="timeline-role">AI/ML Engineer</div>
           <ul class="timeline-bullets">
-            <li>Built end-to-end ML systems for batch and real-time inference, improving deployment efficiency by ~35%.</li>
-            <li>Fine-tuned BERT and RoBERTa transformer models, improving classification accuracy by 20%.</li>
-            <li>Developed scalable NLP pipelines for large-volume unstructured data processing.</li>
-            <li>Containerized ML workloads with Docker and Kubernetes for fault-tolerant production environments.</li>
-            <li>Implemented monitoring frameworks to detect data drift, reducing production issues by 30%.</li>
+            <li>Built end-to-end ML systems for batch and near-real-time inference, reducing data processing time by 30% while maintaining consistent latency and throughput.</li>
+            <li>Fine-tuned BERT and RoBERTa transformer models for text classification and information extraction, improving accuracy by 20% and reducing manual review effort.</li>
+            <li>Developed CNN-based computer vision models for image classification and object detection, integrating outputs into analytics and automation workflows.</li>
+            <li>Built scalable NLP preprocessing pipelines (tokenization, embeddings, normalization) supporting large-volume unstructured data training and inference.</li>
+            <li>Designed RESTful model-serving APIs with input validation, error handling, and versioning strategies, reducing response latency by 25% and ensuring backward compatibility.</li>
+            <li>Containerized ML workloads with Docker and orchestrated via Kubernetes, supporting rolling updates, autoscaling, and rapid rollback.</li>
+            <li>Implemented post-deployment monitoring for data drift, performance metrics, and schema validation, reducing production issues by 30%; automated retraining workflows with full auditability.</li>
+            <li>Authored technical documentation covering model behavior, data dependencies, deployment architecture, and operational runbooks.</li>
           </ul>
           <div class="timeline-tags">
             <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span>
-            <span class="tag">NLP</span><span class="tag">Docker</span><span class="tag">Kubernetes</span>
-            <span class="tag">AWS</span><span class="tag">Spark</span>
+            <span class="tag">BERT/RoBERTa</span><span class="tag">CNN</span><span class="tag">OpenCV</span>
+            <span class="tag">FastAPI</span><span class="tag">NLP</span><span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span><span class="tag">AWS</span><span class="tag">Spark</span>
           </div>
         </div>
       </div>
@@ -718,14 +708,16 @@
           <div class="timeline-role">Senior Data Scientist</div>
           <ul class="timeline-bullets">
             <li>Developed large-scale Spark pipelines processing high-volume retail data, cutting processing time by 35%.</li>
-            <li>Built ML models for demand forecasting, improving accuracy by 18% and optimizing inventory planning.</li>
+            <li>Built ML models for demand forecasting incorporating seasonality, promotions, and regional signals, improving accuracy by 18% and optimizing inventory planning.</li>
             <li>Delivered interactive Tableau dashboards for KPI monitoring and data-driven decisions.</li>
             <li>Optimized SQL queries and workflows, reducing execution time by 40%.</li>
-            <li>Built and deployed AWS-based data pipelines using S3, Lambda, and Redshift.</li>
+            <li>Built and deployed AWS-based data pipelines using S3, Lambda, and Redshift; automated ETL workflows reducing operational overhead.</li>
+            <li>Containerized ML applications with Docker and integrated into CI/CD pipelines (Jenkins); supported Kubernetes deployments with rolling updates and rollback strategies.</li>
           </ul>
           <div class="timeline-tags">
             <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Spark</span>
             <span class="tag">AWS</span><span class="tag">Tableau</span><span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span><span class="tag">Jenkins</span>
           </div>
         </div>
       </div>
@@ -739,14 +731,16 @@
         <div class="timeline-right">
           <div class="timeline-role">Data Scientist</div>
           <ul class="timeline-bullets">
-            <li>Built scalable data pipelines using Spark and Azure Data Factory, improving efficiency by 30%.</li>
+            <li>Built scalable Spark-based distributed pipelines to process large volumes of clinical and operational healthcare data.</li>
+            <li>Designed Azure Data Factory ETL workflows automating ingestion from multiple enterprise sources with consistent transformations across environments.</li>
             <li>Enabled near real-time analytics via Azure Event Hubs and Stream Analytics integration.</li>
-            <li>Developed ML models for clinical and operational analytics to support data-driven decisions.</li>
-            <li>Created Power BI dashboards with role-based access for diverse stakeholders.</li>
+            <li>Trained and fine-tuned TensorFlow/Keras models for classification and regression; conducted cross-validation and performance analysis prior to deployment.</li>
+            <li>Implemented data anonymization and masking techniques to support healthcare data privacy and regulatory compliance.</li>
+            <li>Automated Power BI dataset refreshes, implemented row-level security, and delivered interactive dashboards for operational and clinical decision-making.</li>
           </ul>
           <div class="timeline-tags">
             <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Azure</span>
-            <span class="tag">Spark</span><span class="tag">Power BI</span><span class="tag">TensorFlow</span>
+            <span class="tag">Spark</span><span class="tag">Power BI</span><span class="tag">TensorFlow</span><span class="tag">Docker</span>
           </div>
         </div>
       </div>
@@ -754,20 +748,21 @@
       <div class="timeline-item">
         <div class="timeline-left">
           <div class="timeline-period">Jun 2018 – Jul 2020</div>
-          <div class="timeline-company">TATA AIG Insurance</div>
+          <div class="timeline-company">TATA AIG General Insurance</div>
           <div class="timeline-location">Mumbai, India</div>
         </div>
         <div class="timeline-right">
           <div class="timeline-role">Data Analyst</div>
           <ul class="timeline-bullets">
-            <li>Automated reporting workflows, reducing manual effort by 50% and improving turnaround time.</li>
-            <li>Developed regression and classification models to support risk analysis and business decisions.</li>
-            <li>Built Tableau dashboards to visualize business performance and key metrics.</li>
-            <li>Managed AWS-based batch processing workflows to ensure reliable data processing.</li>
+            <li>Automated enterprise reporting workflows using Python, SQL, SAS macros, and Excel, replacing manual processes with scheduled, repeatable pipelines.</li>
+            <li>Built regression and classification models in R on historical insurance data to support risk assessment, trend analysis, and management decision-making.</li>
+            <li>Developed Python-based extraction and transformation scripts to automate upstream data ingestion, reducing manual effort and operational errors.</li>
+            <li>Managed AWS EC2-based batch jobs within defined SLAs; maintained AWS RDS backup and failover procedures for data availability and compliance.</li>
+            <li>Designed Tableau dashboards optimized for high-volume datasets with efficient calculations and extracts for responsive end-user performance.</li>
           </ul>
           <div class="timeline-tags">
             <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span>
-            <span class="tag">Tableau</span><span class="tag">AWS</span>
+            <span class="tag">SAS</span><span class="tag">Excel</span><span class="tag">Tableau</span><span class="tag">AWS</span>
           </div>
         </div>
       </div>
@@ -840,6 +835,26 @@
           <span class="tag">Azure</span><span class="tag">Spark</span><span class="tag">Power BI</span><span class="tag">Python</span>
         </div>
       </div>
+
+      <div class="project-card">
+        <div class="project-num">07 /</div>
+        <h3>LLM Evaluation & Prompt Optimization</h3>
+        <p>Implemented model evaluation frameworks and prompt optimization techniques to improve LLM response quality, reduce hallucinations, and ensure production reliability across enterprise AI workflows.</p>
+        <div class="project-impact">↓ Hallucination rate</div>
+        <div class="project-tech">
+          <span class="tag">LangChain</span><span class="tag">Prompt Engineering</span><span class="tag">Python</span><span class="tag">RAG</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">08 /</div>
+        <h3>Computer Vision Classification & Detection</h3>
+        <p>Developed CNN-based models for image classification and object detection at Synechron, integrating vision pipeline outputs into downstream analytics and automation workflows via RESTful APIs.</p>
+        <div class="project-impact">Production-integrated CV pipeline</div>
+        <div class="project-tech">
+          <span class="tag">CNNs</span><span class="tag">OpenCV</span><span class="tag">PyTorch</span><span class="tag">FastAPI</span>
+        </div>
+      </div>
  
     </div>
   </section>
@@ -849,6 +864,7 @@
     <div class="section-label" style="font-weight: bold;"> 04. skills</div>
     <h2>Tech stack &amp;<br/>tools.</h2>
     <div class="skills-container">
+
       <div class="skill-group">
         <div class="skill-group-title">Generative AI & LLMs</div>
         <div class="skill-pills">
@@ -856,10 +872,13 @@
           <span class="skill-pill">LangChain</span>
           <span class="skill-pill">LangGraph</span>
           <span class="skill-pill">Prompt Engineering</span>
-          <span class="skill-pill">Vector DBs</span>
+          <span class="skill-pill">Pinecone</span>
+          <span class="skill-pill">Weaviate</span>
+          <span class="skill-pill">LlamaIndex</span>
           <span class="skill-pill">Embeddings</span>
         </div>
       </div>
+
       <div class="skill-group">
         <div class="skill-group-title">ML & Deep Learning</div>
         <div class="skill-pills">
@@ -867,11 +886,28 @@
           <span class="skill-pill">PyTorch</span>
           <span class="skill-pill">Transformers</span>
           <span class="skill-pill">BERT</span>
-          <span class="skill-pill">NLP</span>
+          <span class="skill-pill">CNNs</span>
+          <span class="skill-pill">RNNs / LSTMs</span>
+          <span class="skill-pill">Transfer Learning</span>
           <span class="skill-pill">Regression</span>
           <span class="skill-pill">Classification</span>
         </div>
       </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">NLP & Computer Vision</div>
+        <div class="skill-pills">
+          <span class="skill-pill">SpaCy</span>
+          <span class="skill-pill">NLTK</span>
+          <span class="skill-pill">Tokenization</span>
+          <span class="skill-pill">Sentiment Analysis</span>
+          <span class="skill-pill">Topic Modeling</span>
+          <span class="skill-pill">OpenCV</span>
+          <span class="skill-pill">Object Detection</span>
+          <span class="skill-pill">Segmentation</span>
+        </div>
+      </div>
+
       <div class="skill-group">
         <div class="skill-group-title">Cloud & MLOps</div>
         <div class="skill-pills">
@@ -882,33 +918,56 @@
           <span class="skill-pill">Kubernetes</span>
           <span class="skill-pill">MLflow</span>
           <span class="skill-pill">CI/CD</span>
+          <span class="skill-pill">FastAPI</span>
+          <span class="skill-pill">Flask</span>
         </div>
       </div>
+
       <div class="skill-group">
         <div class="skill-group-title">Data & Big Data</div>
         <div class="skill-pills">
           <span class="skill-pill">Spark</span>
           <span class="skill-pill">Kafka</span>
           <span class="skill-pill">Hadoop</span>
-          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">Snowflake</span>
           <span class="skill-pill">Redshift</span>
+          <span class="skill-pill">Redis</span>
+          <span class="skill-pill">Neo4j</span>
+          <span class="skill-pill">SQL Server</span>
         </div>
       </div>
+
       <div class="skill-group">
         <div class="skill-group-title">Languages</div>
         <div class="skill-pills">
           <span class="skill-pill">Python</span>
           <span class="skill-pill">SQL</span>
           <span class="skill-pill">R</span>
+          <span class="skill-pill">SAS</span>
+          <span class="skill-pill">Excel</span>
         </div>
       </div>
+
       <div class="skill-group">
         <div class="skill-group-title">Visualization</div>
         <div class="skill-pills">
           <span class="skill-pill">Tableau</span>
           <span class="skill-pill">Power BI</span>
+          <span class="skill-pill">Matplotlib</span>
+          <span class="skill-pill">ggplot2</span>
         </div>
       </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Tools & Practices</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Git / GitHub</span>
+          <span class="skill-pill">Agile / Scrum</span>
+          <span class="skill-pill">Jenkins</span>
+          <span class="skill-pill">MLflow</span>
+        </div>
+      </div>
+
     </div>
   </section>
  
@@ -920,8 +979,8 @@
       <p>I'm open to new opportunities, collaborations, and interesting AI/ML projects. Feel free to reach out.</p>
       <div class="contact-links">
         <a href="mailto:jyoshnagopal6@gmail.com" class="btn btn-primary">jyoshnagopal6@gmail.com</a>
-        <a href="https://linkedin.com/in/Jyoshnagopal6" target="_blank" class="btn btn-outline">LinkedIn ↗</a>
         <a href="tel:+19133296306" class="btn btn-outline">📞 +1 (913) 329-6306</a>
+        <a href="https://linkedin.com/in/Jyoshnagopal6" target="_blank" class="btn btn-outline">www.linkedin.com/in/jyoshnagopal6</a>
       </div>
     </div>
   </section>
@@ -933,4 +992,3 @@
  
 </body>
 </html>
- 
